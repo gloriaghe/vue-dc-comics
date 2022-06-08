@@ -55,32 +55,41 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-    @mixin my-flex{
-        display: flex;
-        flex-direction: row;
-    };
-    
+@mixin my-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+;
+
 section {
     background-color: #0282f9;
     @include my-flex;
     justify-content: center;
 
     #containerBuy {
-        width: 70%;
+        width: 80%;
         @include my-flex;
         justify-content: space-between;
 
         a {
             color: white;
             text-decoration: none;
-            margin: 20px 0;
+            margin: 40px 0;
             @include my-flex;
             align-items: center;
+            font-size: 15px;
 
             img {
-                width: 15%;
-                padding: 0 20px;
+                width: 35%;
+                padding: 0 15px;
+
             }
+
+                img:last-child{
+                    width: 40px;
+                }
+
         }
     }
 }

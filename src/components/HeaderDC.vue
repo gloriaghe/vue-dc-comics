@@ -90,7 +90,7 @@ export default {
 header {
 
     @include my-flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     section {
         @include my-flex;
