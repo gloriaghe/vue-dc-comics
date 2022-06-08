@@ -1,17 +1,20 @@
 <template>
     <header>
-        <a href="#">
-            <img src="../assets/img/dc-logo.png" alt="Logo Dc Comics">
-        </a>
-        <nav>
-            <ul>
-                <li v-for="(link, i) in links" :key="i">
-                    <a :href="link.url" >
-                        {{link.text}}
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <section>
+
+            <a href="#">
+                <img src="../assets/img/dc-logo.png" alt="Logo Dc Comics">
+            </a>
+            <nav>
+                <ul>
+                    <li v-for="(link, i) in links" :key="i">
+                        <a :href="link.url">
+                            {{ link.text }}
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
     </header>
 </template>
 
@@ -71,8 +74,8 @@ export default {
                     url: "#",
                     current: false
                 }
-          ]
-      }
+            ]
+        }
     }
 
 }
@@ -80,27 +83,42 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+@mixin my-flex{
+        display: flex;
+        flex-direction: row;
+    };
+header {
 
-    ul{
-        list-style-type: none;
-        margin: 20px 0;
-        
-        li{
-            display: inline-block;
-            padding: 10px;
+    @include my-flex;
+    justify-content: space-between;
 
-            a{
-                text-decoration: none;
-                color: black;
-                font-weight: bold;
+    section {
+        @include my-flex;
+        justify-content: space-around;
+        width: 70%;
+
+        img{
+            width: 80px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 20px 0;
+
+            li {
+                display: inline-block;
+                padding: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 15px;
+                }
             }
         }
     }
 
-}
 
+}
 </style>
