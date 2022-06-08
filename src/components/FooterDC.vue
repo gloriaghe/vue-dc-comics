@@ -131,8 +131,6 @@ section {
             li {
                 text-align: start;
 
-
-
                 a {
                     text-decoration: none;
                     color: grey;
