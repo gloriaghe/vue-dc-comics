@@ -91,6 +91,7 @@ header {
 
     @include my-flex;
     justify-content: space-around;
+    align-items: center;
     height: 150px;
 
     section {

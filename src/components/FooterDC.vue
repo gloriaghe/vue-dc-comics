@@ -49,8 +49,8 @@
                 <button>
                     <a href="#">SIGN-UP NOW!</a>
                 </button>
-                <div>
-                    <a href="#">FOLLOW US</a>
+                <div id="social">
+                    <a id="follow" href="#">FOLLOW US</a>
                     <a href="#" v-for="(element, i) in footerSocial" :key="i">
                         <img :src="element.img" :alt="element.name">
                     </a>
@@ -110,6 +110,8 @@ section {
     background-image: url(../assets/img/footer-bg.jpg);
     background-size: contain;
     height: 380px;
+    @include my-flex;
+    justify-content: space-evenly;
 
     #linkFooter {
         @include my-flex;
@@ -118,13 +120,18 @@ section {
 
         h3 {
             color: white;
+            text-align: start;
         }
 
         ul {
+
             list-style-type: none;
             margin: 20px 0;
 
             li {
+                text-align: start;
+
+
 
                 a {
                     text-decoration: none;
@@ -159,6 +166,28 @@ nav {
         width: 70%;
 
         button {
+            background-color: #303030;
+            border: 2px solid #0282f9;
+            padding: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        #social {
+            width: 35%;
+            @include my-flex;
+            align-items: center;
+
+            #follow {
+                color: #0282f9;
+                font-size: 20px;
+                font-weight: bold;
+            }
 
         }
     }
