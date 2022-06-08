@@ -1,8 +1,8 @@
 <template>
     <footer>
-        <section>
+        <section id="sectionFooter">
             <div id="linkFooter">
-                <div>
+                <section>
 
                     <div>
                         <h3>DC COMICS</h3>
@@ -21,26 +21,27 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </section>
 
-                <div>
+                <section>
                     <h3>DC</h3>
                     <ul>
                         <li v-for="(element, i) in DC " :key="i">
                             <a href="#">{{ element }}</a>
                         </li>
                     </ul>
-                </div>
+                </section>
 
-                <div>
+                <section>
                     <h3>SITES</h3>
                     <ul>
                         <li v-for="(element, i) in sites " :key="i">
                             <a href="#">{{ element }}</a>
                         </li>
                     </ul>
-                </div>
-                <img src="../assets/img/dc-logo-bg.png" alt="logo DC">
+                </section>
+                
+                <img id="logo" src="../assets/img/dc-logo-bg.png" alt="logo DC">
             </div>
         </section>
 
@@ -106,43 +107,48 @@ export default {
     flex-direction: row;
 }
 
-section {
+#sectionFooter {
     background-image: url(../assets/img/footer-bg.jpg);
-    background-size: contain;
-    height: 380px;
+    background-size: cover;
     @include my-flex;
     justify-content: space-evenly;
 
     #linkFooter {
         @include my-flex;
         justify-content: space-between;
-        width: 70%;
+        width: 80%;
+        height: 400px;
 
-        h3 {
-            color: white;
-            text-align: start;
-        }
+        section {
+            margin-top: 30px;
 
-        ul {
-
-            list-style-type: none;
-            margin: 20px 0;
-
-            li {
+            h3 {
+                color: white;
                 text-align: start;
+            }
 
-                a {
-                    text-decoration: none;
-                    color: grey;
-                    font-weight: bold;
-                    font-size: 15px;
+            ul {
+
+                list-style-type: none;
+                margin: 20px 0;
+
+                li {
+                    text-align: start;
+
+                    a {
+                        text-decoration: none;
+                        color: grey;
+                        font-weight: bold;
+                        font-size: 15px;
+                    }
                 }
             }
         }
     }
 
-    img {
-        width: 50%;
+    #logo {
+        width: 35%;
+        margin-top: -40px
     }
 }
 
@@ -161,7 +167,7 @@ nav {
     div {
         @include my-flex;
         justify-content: space-between;
-        width: 70%;
+        width: 80%;
 
         button {
             background-color: #303030;

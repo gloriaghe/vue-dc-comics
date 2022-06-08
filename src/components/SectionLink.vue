@@ -81,16 +81,13 @@ section {
             font-size: 15px;
 
             img {
-                width: 35%;
+                width: 30%;
                 padding: 0 15px;
-
-            }
-
-                img:last-child{
-                    width: 40px;
-                }
-
+            } 
         }
+          div:last-child img{
+                    width: 100%;
+                }
     }
 }
 </style>

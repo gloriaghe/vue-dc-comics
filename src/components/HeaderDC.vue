@@ -96,8 +96,8 @@ header {
 
     section {
         @include my-flex;
-        justify-content: space-around;
-        width: 70%;
+        justify-content: space-between;
+        width: 80%;
 
         img{
             width: 80px;
