@@ -1,49 +1,61 @@
 <template>
     <footer>
         <section>
-            <div>
+            <div id="linkFooter">
+                <div>
+
+                    <div>
+                        <h3>DC COMICS</h3>
+                        <ul>
+                            <li v-for="(element, i) in dcComics " :key="i">
+                                <a href="#">{{ element }}</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>SHOP</h3>
+                        <ul>
+                            <li v-for="(element, i) in shop " :key="i">
+                                <a href="#">{{ element }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
                 <div>
-                    <h3>DC COMICS</h3>
+                    <h3>DC</h3>
                     <ul>
-                        <li v-for="(element, i) in dcComics " :key="i">
+                        <li v-for="(element, i) in DC " :key="i">
                             <a href="#">{{ element }}</a>
                         </li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3>SHOP</h3>
-                    <ul>
-                        <li v-for="(element, i) in shop " :key="i">
-                            <a href="#">{{ element }}</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div>
-                <h3>DC</h3>
-                <ul>
-                    <li v-for="(element, i) in DC " :key="i">
-                        <a href="#">{{ element }}</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>SITES</h3>
+                    <h3>SITES</h3>
                     <ul>
                         <li v-for="(element, i) in sites " :key="i">
                             <a href="#">{{ element }}</a>
                         </li>
                     </ul>
+                </div>
+                <img src="../assets/img/dc-logo-bg.png" alt="logo DC">
             </div>
-            <img src="../assets/img/dc-logo-bg.png" alt="logo DC">
         </section>
 
         <nav>
-
+            <div>
+                <button>
+                    <a href="#">SIGN-UP NOW!</a>
+                </button>
+                <div>
+                    <a href="#">FOLLOW US</a>
+                    <a href="#" v-for="(element, i) in footerSocial" :key="i">
+                        <img :src="element.img" :alt="element.name">
+                    </a>
+                </div>
+            </div>
         </nav>
     </footer>
 </template>
@@ -57,7 +69,29 @@ export default {
             dcComics: ["Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"],
             shop: ["Shop DC", "Shop DC Collectibles"],
             DC: ["Terms of use", "Privacy Policy(New)", "Ad Choices", "Advertising", "Jobs", "Subscription", "Talent Workshops", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us"],
-            sites: ["DC", "MAD Megazine", "DC Kids", "DC Universe", "DC Power Visa"]
+            sites: ["DC", "MAD Megazine", "DC Kids", "DC Universe", "DC Power Visa"],
+            footerSocial: [
+                {
+                    img: require("../assets/img/footer-facebook.png"),
+                    name: "Facebook"
+                },
+                {
+                    img: require("../assets/img/footer-twitter.png"),
+                    name: "Twitter"
+                },
+                {
+                    img: require("../assets/img/footer-youtube.png"),
+                    name: "YouTube"
+                },
+                {
+                    img: require("../assets/img/footer-pinterest.png"),
+                    name: "Pinterest"
+                },
+                {
+                    img: require("../assets/img/footer-periscope.png"),
+                    name: "Periscope"
+                }
+            ]
         }
     }
 
@@ -75,29 +109,58 @@ export default {
 section {
     background-image: url(../assets/img/footer-bg.jpg);
     background-size: contain;
-    height: 300px;
-    @include my-flex;
-    justify-content: space-between;
+    height: 380px;
 
-    h3 {
-        color: white;
-    }
+    #linkFooter {
+        @include my-flex;
+        justify-content: space-between;
+        width: 70%;
 
-    ul {
-        list-style-type: none;
-        margin: 20px 0;
+        h3 {
+            color: white;
+        }
 
-        li {
+        ul {
+            list-style-type: none;
+            margin: 20px 0;
 
-            a {
-                text-decoration: none;
-                color: grey;
-                font-weight: bold;
-                font-size: 15px;
+            li {
+
+                a {
+                    text-decoration: none;
+                    color: grey;
+                    font-weight: bold;
+                    font-size: 15px;
+                }
             }
         }
     }
+
+    img {
+        width: 50%;
+    }
 }
 
-nav {}
+nav {
+    @include my-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #303030;
+    height: 130px;
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    div {
+        @include my-flex;
+        justify-content: space-between;
+        width: 70%;
+
+        button {
+
+        }
+    }
+}
 </style>
