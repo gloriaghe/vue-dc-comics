@@ -61,9 +61,7 @@ $small: 1100px;
 @mixin my-flex {
     display: flex;
     flex-direction: row;
-}
-
-;
+};
 
 section {
     background-color: #0282f9;
@@ -74,7 +72,7 @@ section {
         width: 75%;
         @include my-flex;
         justify-content: space-between;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
 
         div {
             width: 20%;

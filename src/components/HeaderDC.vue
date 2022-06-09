@@ -8,7 +8,7 @@
             <nav>
                 <ul>
                     <li v-for="(link, i) in links" :key="i">
-                        <a :href="link.url" :class="link.current ? 'here' : ''">
+                        <a :href="link.url" @click="hereActive(link)" :class="link.current ? 'here' : ''">
                             {{ link.text }}
                         </a>
                     </li>
@@ -75,6 +75,14 @@ export default {
                     current: false
                 }
             ]
+        }
+    },
+    methods:{
+        hereActive(attivo){
+            this.links.forEach(element =>{
+              element.current= false    
+            });
+            attivo.current = true
         }
     }
 
