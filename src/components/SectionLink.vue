@@ -55,6 +55,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+//media query
+$small: 1100px;
+
 @mixin my-flex {
     display: flex;
     flex-direction: row;
@@ -71,9 +74,10 @@ section {
         width: 75%;
         @include my-flex;
         justify-content: space-between;
+            flex-wrap: wrap;
 
         div {
-            width: 25%;
+            width: 20%;
             @include my-flex;
             justify-content: center;
 
@@ -91,6 +95,11 @@ section {
                 }
             }
 
+            @media screen and (max-width: $small ) {
+                & {
+                    width: 30%;
+                }
+            }
         }
 
 

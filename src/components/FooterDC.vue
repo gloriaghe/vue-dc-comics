@@ -40,7 +40,7 @@
                         </li>
                     </ul>
                 </section>
-                
+
                 <img id="logo" src="../assets/img/dc-logo-bg.png" alt="logo DC">
             </div>
         </section>
@@ -52,9 +52,11 @@
                 </button>
                 <div id="social">
                     <a id="follow" href="#">FOLLOW US</a>
-                    <a href="#" v-for="(element, i) in footerSocial" :key="i">
-                        <img :src="element.img" :alt="element.name">
-                    </a>
+                    <div id="containersocialFooter">
+                        <a href="#" v-for="(element, i) in footerSocial" :key="i">
+                            <img :src="element.img" :alt="element.name">
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -102,6 +104,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+//media query
+$small: 1100px;
+
 @mixin my-flex {
     display: flex;
     flex-direction: row;
@@ -152,7 +157,7 @@ export default {
         object-fit: contain;
         margin-top: -40px;
         margin-bottom: -40px;
-        
+
     }
 }
 
@@ -197,6 +202,12 @@ nav {
                 font-weight: bold;
             }
 
+            @media screen and (max-width: $small ) {
+                & {
+                    width: 50%;
+
+                }
+            }
         }
     }
 }

@@ -18,8 +18,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+//media query
+$medium: 1400px;
+$small: 1000px;
+
 div{
-    flex-basis: 20%;
+    flex-basis: 15%;
     padding: 30px 0;
 
     img{
@@ -42,5 +46,14 @@ div{
 
 }
 
-
+@media screen and (max-width: $medium ){
+    div{
+        flex-basis: 20%;
+    }
+}
+@media screen and (max-width: $small ){
+    div{
+        flex-basis: 25%;
+    }
+}
 </style>

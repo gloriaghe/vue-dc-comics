@@ -83,6 +83,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+//media query
+$medium: 1200px;
+
 @mixin my-flex {
     display: flex;
     flex-direction: row;
@@ -125,6 +128,13 @@ header {
                         border-bottom: 4px solid #53b0f0;
                         padding-bottom: 55px;
                         color: #53b0f0;
+                    }
+
+                    @media screen and (max-width: $medium ) {
+                        &.here {
+                            padding-bottom: 15px;
+
+                        }
                     }
 
                     &:hover {
