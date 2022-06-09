@@ -2,6 +2,7 @@
   <div id="app">
     <HeaderDC/>
     <main>
+        <JumbotronDC/>
         <SectionDC/>
         <SectionLink/>
     </main>
@@ -11,6 +12,7 @@
 
 <script>
 import HeaderDC from './components/HeaderDC.vue'
+import JumbotronDC from './components/JumbotronDC.vue'
 import SectionDC from './components/SectionDC.vue'
 import SectionLink from './components/SectionLink.vue'
 import FooterDC from './components/FooterDC.vue'
@@ -19,6 +21,7 @@ export default {
   name: 'App',
   components: {
     HeaderDC,
+    JumbotronDC,
     SectionDC,
     SectionLink,
     FooterDC

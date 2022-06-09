@@ -126,6 +126,10 @@ header {
                         padding-bottom: 65px;
                         color: #53b0f0;
                     }
+                    
+                    &:hover{
+                        color: #53b0f0;
+                    }
                 }
             }
         }
