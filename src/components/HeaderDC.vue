@@ -8,7 +8,7 @@
             <nav>
                 <ul>
                     <li v-for="(link, i) in links" :key="i">
-                        <a :href="link.url">
+                        <a :href="link.url" :class="link.current ? 'here' : ''">
                             {{ link.text }}
                         </a>
                     </li>
@@ -83,10 +83,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@mixin my-flex{
-        display: flex;
-        flex-direction: row;
-    };
+@mixin my-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+;
+
 header {
 
     @include my-flex;
@@ -99,7 +102,7 @@ header {
         justify-content: space-between;
         width: 80%;
 
-        img{
+        img {
             width: 80px;
         }
 
@@ -116,6 +119,13 @@ header {
                     color: black;
                     font-weight: bold;
                     font-size: 15px;
+
+
+                    &.here {
+                        border-bottom: 4px solid #53b0f0;
+                        padding-bottom: 65px;
+                        color: #53b0f0;
+                    }
                 }
             }
         }
