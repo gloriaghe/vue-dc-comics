@@ -1,9 +1,12 @@
 <template>
     <section>
         <div id="containerCard">
+            <div id="title">CURRENT SERIES</div>
             <CardFumetto v-for="(fumetto, i) in fumetti" :img="fumetto.thumb" :text="fumetto.series" :key="i" />
         </div>
-
+        <button>
+            <a href="#">LOAD MORE</a>
+        </button>
     </section>
 </template>
 
@@ -102,15 +105,48 @@ export default {
 section {
     background-color: #1c1c1c;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
 
-    #containerCard{
+
+
+    #containerCard {
         display: flex;
-        align-items: flex-start;
         flex-wrap: wrap;
-        width: 70%;
+        width: 75%;
+        margin: 0 auto;
+        position: relative;
+
+
+        #title {
+            background-color: #0282f9;
+            padding: 15px 20px;
+            position: absolute;
+            top: -60px;
+            left: 20px;
+            font-size: 22px;
+            font-weight: bolder;
+        }
 
     }
 
+    button{
+        background-color: #0282f9;
+        align-self: center;
+        padding: 12px 40px;
+        margin: 20px;
+        border: none;
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+            
+        }
+
+    }
 
 }
 </style>

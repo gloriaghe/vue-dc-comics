@@ -95,12 +95,12 @@ header {
     @include my-flex;
     justify-content: space-around;
     align-items: center;
-    height: 150px;
+    height: 130px;
 
     section {
         @include my-flex;
         justify-content: space-between;
-        width: 80%;
+        width: 75%;
 
         img {
             width: 80px;
@@ -123,11 +123,11 @@ header {
 
                     &.here {
                         border-bottom: 4px solid #53b0f0;
-                        padding-bottom: 65px;
+                        padding-bottom: 55px;
                         color: #53b0f0;
                     }
-                    
-                    &:hover{
+
+                    &:hover {
                         color: #53b0f0;
                     }
                 }

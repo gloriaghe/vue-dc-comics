@@ -116,8 +116,9 @@ export default {
     #linkFooter {
         @include my-flex;
         justify-content: space-between;
-        width: 80%;
-        height: 400px;
+        width: 75%;
+        height: 350px;
+        overflow: hidden;
 
         section {
             margin-top: 30px;
@@ -147,8 +148,11 @@ export default {
     }
 
     #logo {
-        width: 35%;
-        margin-top: -40px
+        width: 50%;
+        object-fit: contain;
+        margin-top: -40px;
+        margin-bottom: -40px;
+        
     }
 }
 
@@ -158,16 +162,16 @@ nav {
     align-items: center;
     background-color: #303030;
     height: 130px;
-    z-index: 100;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    // z-index: 100;
+    // position: fixed;
+    // bottom: 0;
+    // left: 0;
     width: 100%;
 
     div {
         @include my-flex;
         justify-content: space-between;
-        width: 80%;
+        width: 75%;
 
         button {
             background-color: #303030;

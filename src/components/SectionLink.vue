@@ -68,26 +68,33 @@ section {
     justify-content: center;
 
     #containerBuy {
-        width: 80%;
+        width: 75%;
         @include my-flex;
         justify-content: space-between;
 
-        a {
-            color: white;
-            text-decoration: none;
-            margin: 40px 0;
+        div {
+            width: 25%;
             @include my-flex;
-            align-items: center;
-            font-size: 15px;
+            justify-content: center;
 
-            img {
-                width: 30%;
-                padding: 0 15px;
-            } 
-        }
-          div:last-child img{
-                    width: 100%;
+            a {
+                color: white;
+                text-decoration: none;
+                margin: 40px 0;
+                @include my-flex;
+                align-items: center;
+                font-size: 15px;
+
+                img {
+                    width: 80px;
+                    padding: 0 15px;
                 }
+            }
+
+        }
+
+
+
     }
 }
 </style>
