@@ -128,6 +128,7 @@ section {
             left: 20px;
             font-size: 22px;
             font-weight: bolder;
+            cursor: pointer;
         }
 
     }

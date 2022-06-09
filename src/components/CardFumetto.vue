@@ -1,8 +1,8 @@
 <template>
-   <div>
+   <a href="#">
        <img :src="img" :alt="text">
        <span>{{text}}</span>
-   </div>
+   </a>
 </template>
 
 <script>
@@ -22,9 +22,15 @@ export default {
 $medium: 1400px;
 $small: 1000px;
 
-div{
+a{
     flex-basis: 15%;
     padding: 30px 0;
+    text-decoration: none;
+    color: white;
+
+    &:hover img{
+            opacity: 60%;
+    }
 
     img{
         width: 80%;
@@ -32,6 +38,7 @@ div{
         object-fit: cover;
         object-position: top;
 
+        
     }
 
     span {
@@ -47,12 +54,12 @@ div{
 }
 
 @media screen and (max-width: $medium ){
-    div{
+    a{
         flex-basis: 20%;
     }
 }
 @media screen and (max-width: $small ){
-    div{
+    a{
         flex-basis: 25%;
     }
 }
